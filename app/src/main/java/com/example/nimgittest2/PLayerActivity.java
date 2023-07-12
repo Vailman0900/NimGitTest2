@@ -46,6 +46,8 @@ public class PLayerActivity extends AppCompatActivity implements View.OnClickLis
             switch(gameDifficulty){
                 case 1:
                     Intent easy = new Intent(PLayerActivity.this, EasyGame.class);
+                    easy.putExtra("p1Name", etP1.getText().toString());
+                    easy.putExtra("p2Name", etP2.getText().toString());
                     startActivity(easy);
                     break;
                 case 2:
