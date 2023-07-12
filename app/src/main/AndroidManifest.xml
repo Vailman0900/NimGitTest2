@@ -36,6 +36,14 @@
             android:exported="true">
 
         </activity>
+        <activity android:name=".MediumGame"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".HardGame"
+            android:exported="true">
+
+        </activity>
     </application>
 
 </manifest>

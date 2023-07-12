@@ -21,6 +21,7 @@ public class RulesActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.btnReturn) {
+            finish();
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }

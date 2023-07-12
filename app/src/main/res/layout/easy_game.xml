@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btnEasTake1"
+        android:id="@+id/btnMedTake1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Take"
@@ -18,7 +18,7 @@
         app:layout_constraintVertical_bias="0.272" />
 
     <Button
-        android:id="@+id/btnEasTake2"
+        android:id="@+id/btnHarTake2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Take"
@@ -30,7 +30,7 @@
         app:layout_constraintVertical_bias="0.478" />
 
     <Button
-        android:id="@+id/btnEasTake4"
+        android:id="@+id/btnHarTake4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Take"
@@ -42,11 +42,11 @@
         app:layout_constraintVertical_bias="0.673" />
 
     <ImageView
-        android:id="@+id/igEasMatch9"
+        android:id="@+id/igMedMatch9"
         android:layout_width="42dp"
         android:layout_height="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnEasTake1"
+        app:layout_constraintEnd_toStartOf="@+id/btnMedTake1"
         app:layout_constraintHorizontal_bias="0.067"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -54,11 +54,11 @@
         app:srcCompat="@drawable/matchstick_notip" />
 
     <ImageView
-        android:id="@+id/igEasMatch8"
+        android:id="@+id/igMedMatch8"
         android:layout_width="42dp"
         android:layout_height="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnEasTake1"
+        app:layout_constraintEnd_toStartOf="@+id/btnMedTake1"
         app:layout_constraintHorizontal_bias="0.275"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -66,11 +66,11 @@
         app:srcCompat="@drawable/matchstick_notip" />
 
     <ImageView
-        android:id="@+id/igEasMatch6"
+        android:id="@+id/igMedMatch6"
         android:layout_width="42dp"
         android:layout_height="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnEasTake1"
+        app:layout_constraintEnd_toStartOf="@+id/btnMedTake1"
         app:layout_constraintHorizontal_bias="0.69"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -78,11 +78,11 @@
         app:srcCompat="@drawable/matchstick_notip" />
 
     <ImageView
-        android:id="@+id/igEasMatch5"
+        android:id="@+id/igMedMatch5"
         android:layout_width="42dp"
         android:layout_height="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnEasTake1"
+        app:layout_constraintEnd_toStartOf="@+id/btnMedTake1"
         app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -90,7 +90,7 @@
         app:srcCompat="@drawable/matchstick_notip" />
 
     <Button
-        android:id="@+id/btnEasEndTurn"
+        android:id="@+id/btnHarEndTurn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="End Turn"
@@ -114,11 +114,11 @@
         app:layout_constraintVertical_bias="0.915" />
 
     <ImageView
-        android:id="@+id/ivEasMatch1"
+        android:id="@+id/ivMedMatch1"
         android:layout_width="42dp"
         android:layout_height="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnEasTake1"
+        app:layout_constraintEnd_toStartOf="@+id/btnMedTake1"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -126,11 +126,11 @@
         app:srcCompat="@drawable/matchstick_notip" />
 
     <ImageView
-        android:id="@+id/igEasMatch7"
+        android:id="@+id/igMedMatch7"
         android:layout_width="42dp"
         android:layout_height="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnEasTake1"
+        app:layout_constraintEnd_toStartOf="@+id/btnMedTake1"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -138,11 +138,11 @@
         app:srcCompat="@drawable/matchstick_notip" />
 
     <ImageView
-        android:id="@+id/igEasMatch4"
+        android:id="@+id/igMedMatch4"
         android:layout_width="42dp"
         android:layout_height="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/igEasMatch3"
+        app:layout_constraintEnd_toStartOf="@+id/igMedMatch3"
         app:layout_constraintHorizontal_bias="0.581"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -150,11 +150,11 @@
         app:srcCompat="@drawable/matchstick_notip" />
 
     <ImageView
-        android:id="@+id/igEasMatch3"
+        android:id="@+id/igMedMatch3"
         android:layout_width="42dp"
         android:layout_height="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/igEasMatch2"
+        app:layout_constraintEnd_toStartOf="@+id/igMedMatch2"
         app:layout_constraintHorizontal_bias="0.816"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -162,11 +162,11 @@
         app:srcCompat="@drawable/matchstick_notip" />
 
     <ImageView
-        android:id="@+id/igEasMatch2"
+        android:id="@+id/igMedMatch2"
         android:layout_width="42dp"
         android:layout_height="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnEasTake2"
+        app:layout_constraintEnd_toStartOf="@+id/btnHarTake2"
         app:layout_constraintHorizontal_bias="0.779"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

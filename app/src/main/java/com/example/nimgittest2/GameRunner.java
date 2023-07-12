@@ -20,12 +20,19 @@ public class GameRunner {
 
     public boolean makeMove(int pileIndex, int itemCount) {
         // Validate the move
-        if (pileIndex < 0 || pileIndex >= piles.length || itemCount <= 0 || itemCount > piles[pileIndex]) {
+        if (pileIndex < 0 || pileIndex >= piles.length || itemCount <= 0) {
             return false;
+        }
+        if(itemCount > piles[pileIndex]){
+            piles[pileIndex] =0;
+            return true;
         }
 
         // Update the game state
         piles[pileIndex] -= itemCount;
+        for( int pile : piles){
+            System.out.println(pile);
+        }
         return true;
     }
 

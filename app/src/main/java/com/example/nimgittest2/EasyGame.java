@@ -1,7 +1,6 @@
 package com.example.nimgittest2;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -53,22 +52,22 @@ public class EasyGame extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.easy_game);
 
-        take1 = findViewById(R.id.btnEasTake1);
-        take2 = findViewById(R.id.btnEasTake2);
-        take3 = findViewById(R.id.btnEasTake4);
-        endTurn = findViewById(R.id.btnEasEndTurn);
+        take1 = findViewById(R.id.btnMedTake1);
+        take2 = findViewById(R.id.btnHarTake2);
+        take3 = findViewById(R.id.btnHarTake4);
+        endTurn = findViewById(R.id.btnHarEndTurn);
         mainMenu = findViewById(R.id.btnEasMainMenu);
         win = findViewById(R.id.tvWin);
 
-        match1 = findViewById(R.id.ivEasMatch1);
-        match2 = findViewById(R.id.igEasMatch2);
-        match3 = findViewById(R.id.igEasMatch3);
-        match4 = findViewById(R.id.igEasMatch4);
-        match5 = findViewById(R.id.igEasMatch5);
-        match6 = findViewById(R.id.igEasMatch6);
-        match7 = findViewById(R.id.igEasMatch7);
-        match8 = findViewById(R.id.igEasMatch8);
-        match9 = findViewById(R.id.igEasMatch9);
+        match1 = findViewById(R.id.ivMedMatch1);
+        match2 = findViewById(R.id.igMedMatch2);
+        match3 = findViewById(R.id.igMedMatch3);
+        match4 = findViewById(R.id.igMedMatch4);
+        match5 = findViewById(R.id.igMedMatch5);
+        match6 = findViewById(R.id.igMedMatch6);
+        match7 = findViewById(R.id.igMedMatch7);
+        match8 = findViewById(R.id.igMedMatch8);
+        match9 = findViewById(R.id.igMedMatch9);
 
 
         row1[0] = match1;
@@ -148,6 +147,9 @@ public class EasyGame extends AppCompatActivity implements View.OnClickListener{
             if (take3.getVisibility() == View.VISIBLE){
                 gr.makeMove(2,matchesTaken);
             }
+            take1.setVisibility(View.INVISIBLE);
+            take2.setVisibility(View.INVISIBLE);
+            take3.setVisibility(View.INVISIBLE);
             if(gr.isGameOver()){
                 turn %= 2;
                 switch(turn){
@@ -180,6 +182,7 @@ public class EasyGame extends AppCompatActivity implements View.OnClickListener{
         }
 
         if (view == mainMenu){
+            finish();
             Intent intent = new Intent(EasyGame.this, MainActivity.class);
             startActivity(intent);
         }

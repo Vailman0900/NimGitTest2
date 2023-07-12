@@ -45,14 +45,25 @@ public class PLayerActivity extends AppCompatActivity implements View.OnClickLis
             p2.setName(etP2.getText().toString());
             switch(gameDifficulty){
                 case 1:
+                    finish();
                     Intent easy = new Intent(PLayerActivity.this, EasyGame.class);
                     easy.putExtra("p1Name", etP1.getText().toString());
                     easy.putExtra("p2Name", etP2.getText().toString());
                     startActivity(easy);
                     break;
                 case 2:
+                    finish();
+                    Intent medium = new Intent(PLayerActivity.this, MediumGame.class);
+                    medium.putExtra("p1Name", etP1.getText().toString());
+                    medium.putExtra("p2Name", etP2.getText().toString());
+                    startActivity(medium);
                     break;
                 case 3:
+                    finish();
+                    Intent hard = new Intent(PLayerActivity.this, HardGame.class);
+                    hard.putExtra("p1Name", etP1.getText().toString());
+                    hard.putExtra("p2Name", etP2.getText().toString());
+                    startActivity(hard);
                     break;
             }
         }
