@@ -1,10 +1,13 @@
 package com.example.nimgittest2;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,7 +25,6 @@ public class EasyGame extends AppCompatActivity implements View.OnClickListener{
     private Button take3;
     private Button endTurn;
     private Button mainMenu;
-    private Button quit;
 
     private ImageView match1;
     private ImageView match2;
@@ -33,6 +35,7 @@ public class EasyGame extends AppCompatActivity implements View.OnClickListener{
     private ImageView match7;
     private ImageView match8;
     private ImageView match9;
+     TextView win;
     GameRunner gr = new GameRunner();
     ImageView[] row1 = new ImageView[1];
     ImageView[] row2 = new ImageView[3];
@@ -40,8 +43,11 @@ public class EasyGame extends AppCompatActivity implements View.OnClickListener{
 
     String p1Name;
     String p2Name;
+    Player p1 = new Player();
+    Player p2 = new Player();
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +58,7 @@ public class EasyGame extends AppCompatActivity implements View.OnClickListener{
         take3 = findViewById(R.id.btnEasTake4);
         endTurn = findViewById(R.id.btnEasEndTurn);
         mainMenu = findViewById(R.id.btnEasMainMenu);
-        quit = findViewById(R.id.btnEasQuit);
+        win = findViewById(R.id.tvWin);
 
         match1 = findViewById(R.id.ivEasMatch1);
         match2 = findViewById(R.id.igEasMatch2);
@@ -87,14 +93,18 @@ public class EasyGame extends AppCompatActivity implements View.OnClickListener{
         take3.setOnClickListener(this);
         endTurn.setOnClickListener(this);
         mainMenu.setOnClickListener(this);
-        quit.setOnClickListener(this);
+
 
         mainMenu.setVisibility(View.INVISIBLE);
-        quit.setVisibility(View.INVISIBLE);
+
 
         Intent intent = getIntent();
         p1Name = intent.getStringExtra("p1Name");
         p2Name = intent.getStringExtra("p2Name");
+
+
+        p1.setName(p1Name);
+        p2.setName(p2Name);
 
     }
 
@@ -128,16 +138,51 @@ public class EasyGame extends AppCompatActivity implements View.OnClickListener{
             }
         }
         if (view == endTurn){
+            turn++;
             if (take1.getVisibility() == View.VISIBLE){
+                gr.makeMove(0,matchesTaken);
+            }
+            if (take2.getVisibility() == View.VISIBLE){
                 gr.makeMove(1,matchesTaken);
             }
+            if (take3.getVisibility() == View.VISIBLE){
+                gr.makeMove(2,matchesTaken);
+            }
             if(gr.isGameOver()){
+                turn %= 2;
+                switch(turn){
+                    case 0:
+                        win.setText(p1.getName() + "  Wins");
+                        break;
+                    case 1:
+                        win.setText(p2.getName() + " Wins");
+                        break;
+                }
+                take1.setVisibility(View.INVISIBLE);
+                take2.setVisibility(View.INVISIBLE);
+                take3.setVisibility(View.INVISIBLE);
+                mainMenu.setVisibility(View.VISIBLE);
+                endTurn.setVisibility(View.INVISIBLE);
+
 
             }
             if(gr.getPiles()[0] > 0){
                 take1.setVisibility(View.VISIBLE);
             }
+            if(gr.getPiles()[1] > 0){
+                take2.setVisibility(View.VISIBLE);
+            }
+            if(gr.getPiles()[2] > 0){
+                take3.setVisibility(View.VISIBLE);
+            }
 
+            matchesTaken = 0;
         }
+
+        if (view == mainMenu){
+            Intent intent = new Intent(EasyGame.this, MainActivity.class);
+            startActivity(intent);
+        }
+
     }
 }
