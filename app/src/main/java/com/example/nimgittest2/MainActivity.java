@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void GameStart(int i){
-        Intent intent = new Intent(MainActivity.this, GameActivity.class);
+        Intent intent = new Intent(MainActivity.this, PLayerActivity.class);
         intent.putExtra("gameDifficulty", i);
         startActivity(intent);
     }
